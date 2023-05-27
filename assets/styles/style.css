@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    background-color:#999B9E;
+
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: black;
+    height: 100%;
+  }
+
+  .content {
+    grid-area: content;
+    background-color: black;
+    height: 100%;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: black;
+  }
+
+
+  .wrapper {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: minmax(60px,auto) 1fr;
+    grid-template-areas:
+               "header header"
+               "sidebar content"
+               "sidebar content";
+    color: #444;
+
+  }
+.box {
+  color: #fff;
+  padding: 20px;
+  font-size: 150%;
+}
+.keepable-logo {
+    max-width: 138px;
+    height: 24px;
+}
+.keepable-name {
+    font-family: 700;
+    line-height: 1.5em;
+    size: 14px;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas:
+        "header header  header"
+        "sidebar sidebar sidebar"
+        "content content content";
+    }
+    nav ul {
+      flex-direction: column;
+    }
+
+    .sidebar {
+        height: 20vh;
+      }
+    .content {
+       height: 100%;
+    }
+  }
+
+  .formulario {
+    padding: 24px 16px;
+    background-color: white;
+    margin: 16px 0px;
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    /* justify-content: center; */
+    max-width: 600px;
+    margin: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+    border: none;
+  }
+
+  .input {
+    border: none;
+    text-decoration: none;
+    resize: none;
+  }
+
+::placeholder {
+  color: #999B9E;
+}
+
+.text-area-button {
+  width: 100%;
+  min-width: 312px;
+  min-height: 96px;
+}
+
+.container-icon-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note {
+  background-color: white;
+  color: black;
+  width: 260px;
+  height: 260px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+main.section {
+  min-height: 100vh;
+}

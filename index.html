@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keepable</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box header">
+        <img class="keepable-logo" src="assets/images/{keepable}.png" alt="" />
+        <span class="keepable-name">Welcome to {keepable}</span>
+      </div>
+      <div class="box sidebar">
+        <div>
+          <button class="navbar-button">{} NOTES</button>
+        </div>
+        <button class="navbar-button">% TRASH</button>
+      </div>
+      <div class="box content">
+        <div class="formulario">
+          <form action="">
+            <input type="text" placeholder="Title of note" class="input" />
+            <textarea
+              placeholder="Content of note..."
+              class="input text-area-button"
+            ></textarea>
+            <div class="container-icon-button">
+              <button type="button" class="color-button">
+                <img src="assets/icons/color.svg" alt="Change color" />
+              </button>
+              <button type="submit" class="input">Keep it!</button>
+            </div>
+          </form>
+        </div>
+        <main class="section">
+          <div class="container">
+            <ul role="list" class="notes">
+              <li class="note">
+                <div class="note-details">
+                  <h3>NOTE 1</h3>
+                  <p>This is de content of the note</p>
+                </div>
+                <div class="note-actions">
+                  <button class="color-button">
+                    <img src="assets/icons/color.svg" alt="Change color">
+                  </button>
+                  <button class="delete-button">
+                    <img src="assets/icons/delete.svg" alt="Delete note">
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
