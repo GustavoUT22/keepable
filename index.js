@@ -1,4 +1,4 @@
-let notes = [
+let initialNotes = [
   {title: "note 1", content: "hellowwwwwwww world"},
   {title: "note 2", content: "the lide is so hard"},
   {title: "note 3", content: "I only know that I know nothing"},
@@ -7,11 +7,15 @@ let notes = [
   {title: "note 6", content: "I do this project"}
 ]
 
+const notesFromStorage = JSON.parse(localStorage.getItem("notes"))
+const notes = notesFromStorage || initialNotes
+
 //Delete Note 
 function deleteNote(note) {
   const index = notes.indexOf(note)
   notes.splice(index,1)
-  console.log(notes)
+
+  localStorage.setItem("notes", JSON.stringify(notes))
 }
 
 //Create Element
