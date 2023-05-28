@@ -1,11 +1,4 @@
 
-//Delete Note 
-function deleteNote(note) {
-  const index = notes.indexOf(note)
-  notes.splice(index,1)
-
-  localStorage.setItem("notes", JSON.stringify(notes))
-}
 
 //Create Element
 function createNoteEl(note) {
@@ -69,9 +62,3 @@ function renderNotes(notes) {
 }
 
 renderNotes(notes);
-
-
-
-// function addNote(noteID) {
-
-// }
