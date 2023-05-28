@@ -9,6 +9,8 @@ form.addEventListener("submit", (event) => {
                     content: content.value
     };
     notes.push(newNote)
-    
+    localStorage.setItem("notes", JSON.stringify(notes))
+
+    renderNotes(notes)
 });
 
